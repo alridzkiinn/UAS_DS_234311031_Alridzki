@@ -10,7 +10,7 @@ Sebelum mengumpulkan proyek, pastikan:
 - [✅] Ada link video penjeloasan proyek
 
 ### **GitHub Repository:**
-- [ ] Kode dapat dijalankan (tested)
+- [✅] Kode dapat dijalankan (tested)
 - [ ] Ada requirements.txt atau environment.yml
 - [ ] Ada  README.md dengan cara menjalankan
 - [✅] Folder terstruktur (src/, data/, models/, notebooks/)
