@@ -50,6 +50,16 @@ project/
 │
 ├── images/                 # Visualizations
 │   └── r
+│   ├── 5FeatureImportance.png
+│   ├── AccuracyComparison.png
+│   ├── AccuracyPerEpoch.png
+│   ├── CMDL.png
+│   ├── CMLogreg.png
+│   ├── CMRF.png
+│   ├── DistribusiScore.png
+│   ├── HelpFulVotes.png
+│   ├── KorelasiFiturNumerik.png
+│   └──LossPerEpoch.png
 │
 ├── requirements.txt        # Dependencies
 ├── .gitignore
