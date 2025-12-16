@@ -4,7 +4,7 @@
 ## 👤 Informasi
 - **Nama:** [Alridzki Innama Nur Razzaaq]  
 - **Repo:** [https://github.com/alridzkiinn/UAS_DS_234311031_Alridzki.git]  
-- **Video:** [...]  
+- **Video:** [https://youtu.be/z1aEti95hk8]  
 
 ---
 
