@@ -59,7 +59,7 @@ project/
 │   ├── DistribusiScore.png
 │   ├── HelpFulVotes.png
 │   ├── KorelasiFiturNumerik.png
-│   └──LossPerEpoch.png
+│   └── LossPerEpoch.png
 │
 ├── requirements.txt        # Dependencies
 ├── .gitignore
