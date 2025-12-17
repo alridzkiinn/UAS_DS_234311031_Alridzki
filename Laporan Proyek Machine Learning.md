@@ -1,16 +1,16 @@
 ## INFORMASI PROYEK
 
 **Judul Proyek:**  
-[(Contoh: "Klasifikasi Penyakit Daun Menggunakan CNN", "Prediksi Harga Rumah dengan Machine Learning", "Analisis Sentimen Ulasan Produk")]
+PREDIKSI RATING HOTEL DI LAS VEGAS STRIP MENGGUNAKAN MACHINE LEARNING DAN DEEP LEARNING
 
-**Nama Mahasiswa:** [Nama Lengkap]  
-**NIM:** [Nomor Induk Mahasiswa]  
-**Program Studi:** [Teknologi Informasi / Rekayasa Perangkat Lunak]  
-**Mata Kuliah:** [Nama Mata Kuliah]  
-**Dosen Pengampu:** [Nama Dosen]  
-**Tahun Akademik:** [Tahun/Semester]
-**Link GitHub Repository:** [URL Repository]
-**Link Video Pembahasan:** [URL Repository]
+**Nama Mahasiswa:** [Alridzki Innama nur Razzaaq]  
+**NIM:** [234311031]  
+**Program Studi:** [Teknologi Rekayasa Perangkat Lunak]  
+**Mata Kuliah:** [Sata Science]  
+**Dosen Pengampu:** [Gus Nanang Syaifuddiin, S.Kom., M.Kom.]  
+**Tahun Akademik:** [2025/Semester 5]
+**Link GitHub Repository:** [https://github.com/alridzkiinn/UAS_DS_234311031_Alridzki.git]
+**Link Video Pembahasan:** [https://youtu.be/z1aEti95hk8]
 
 ---
 
@@ -34,38 +34,28 @@ Pada proyek ini, mahasiswa diharapkan dapat:
 
 ### 2.1 Latar Belakang
 **Isi bagian ini dengan:**
-- Mengapa proyek ini penting?
-- Permasalahan umum pada domain terkait (misal: kesehatan, pendidikan, keuangan, pertanian, NLP, computer vision, dll.)
-- Manfaat proyek untuk pengguna, bisnis, atau penelitian
-- Studi literatur atau referensi ilmiah (minimal 1–2 sumber wajib)
+Industri perhotelan merupakan salah satu sektor yang sangat kompetitif, khususnya di kawasan wisata populer seperti Las Vegas Strip. Persaingan antar hotel tidak hanya ditentukan oleh lokasi dan harga, tetapi juga oleh kualitas layanan dan tingkat kepuasan pelanggan. Dalam konteks ini, rating hotel menjadi indikator penting yang mencerminkan pengalaman tamu selama menginap dan sering dijadikan dasar pengambilan keputusan oleh calon pelanggan.
+Seiring dengan meningkatnya penggunaan platform digital, ulasan dan rating hotel yang dihasilkan oleh pengguna (user-generated content) semakin melimpah dan bersifat data-driven. Namun, jumlah data yang besar tersebut sulit dianalisis secara manual. Oleh karena itu, diperlukan pendekatan berbasis machine learning dan deep learning untuk mengekstraksi pola, hubungan antar fitur, serta memprediksi rating hotel secara otomatis berdasarkan karakteristik tertentu, seperti jumlah ulasan, fasilitas, dan profil pengguna.
+Prediksi rating hotel memiliki manfaat praktis bagi berbagai pihak. Bagi manajemen hotel, hasil prediksi dapat digunakan sebagai alat evaluasi kualitas layanan dan pengambilan keputusan strategis. Bagi platform reservasi atau sistem rekomendasi, model prediksi rating dapat meningkatkan akurasi rekomendasi hotel kepada pengguna. Selain itu, dari sisi akademik, proyek ini menjadi studi kasus penerapan algoritma machine learning dan deep learning pada data tabular di domain pariwisata.
+Dengan memanfaatkan dataset Las Vegas Strip dari UCI Machine Learning Repository, proyek ini bertujuan untuk membangun dan membandingkan beberapa pendekatan pemodelan, mulai dari model baseline, model machine learning lanjutan, hingga model deep learning, guna memprediksi rating hotel secara akurat dan sistematis.
 
 **Contoh referensi (berformat APA/IEEE):**
-> Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
-
-**[Jelaskan konteks dan latar belakang proyek]**
+UCI Machine Learning Repository. (2015). Las Vegas Strip Dataset.
+Aggarwal, C. C. (2018). Machine Learning for Recommendation Systems. Springer.
+Ricci, F., Rokach, L., & Shapira, B. (2015). Recommender Systems Handbook. Springer.
 
 ## 3. BUSINESS UNDERSTANDING / PROBLEM UNDERSTANDING
 ### 3.1 Problem Statements
-Tuliskan 2–4 pernyataan masalah yang jelas dan spesifik.
-
-**Contoh (universal):**
-1. Model perlu mampu memprediksi nilai target dengan akurasi tinggi
-2. Sistem harus dapat mengidentifikasi pola pada citra secara otomatis
-3. Dataset memiliki noise sehingga perlu preprocessing yang tepat
-4. Dibutuhkan model deep learning yang mampu belajar representasi fitur kompleks
-
-**[Tulis problem statements Anda di sini]**
+1.	Bagaimana membangun model yang mampu memprediksi rating hotel berdasarkan fitur numerik yang tersedia?
+2.	Bagaimana perbandingan performa antara model baseline, model machine learning lanjutan, dan model deep learning?
+3.	Apakah pendekatan deep learning memberikan peningkatan performa yang signifikan dibandingkan model klasik?
+4.	Bagaimana memastikan proses eksperimen bersifat reproducible?
 
 ### 3.2 Goals
-
-Tujuan harus spesifik, terukur, dan selaras dengan problem statement.
-**Contoh tujuan:**
-1. Membangun model ML untuk memprediksi variabel target dengan akurasi > 80%
-2. Mengukur performa tiga pendekatan model (baseline, advanced, deep learning)
-3. Menentukan model terbaik berdasarkan metrik evaluasi yang relevan
-4. Menghasilkan sistem yang dapat bekerja secara reproducible
-
-**[Tulis goals Anda di sini]**
+1.	Membangun model klasifikasi untuk memprediksi rating hotel (1–5).
+2.	Membandingkan performa tiga pendekatan model menggunakan metrik evaluasi klasifikasi.
+3.	Menentukan model terbaik berdasarkan hasil evaluasi.
+4.	Menghasilkan pipeline eksperimen yang dapat dijalankan ulang.
 
 ### 3.3 Solution Approach
 
@@ -73,122 +63,71 @@ Mahasiswa **WAJIB** menggunakan minimal **tiga model** dengan komposisi sebagai 
 #### **Model 1 – Baseline Model**
 Model sederhana sebagai pembanding dasar.
 **Pilihan model:**
-- Linear Regression (untuk regresi)
-- Logistic Regression (untuk klasifikasi)
-- K-Nearest Neighbors (KNN)
-- Decision Tree
-- Naive Bayes
-
-**[Jelaskan model baseline yang Anda pilih dan alasannya]**
+Logistic Regression (Baseline)   Model ini dipilih karena sederhana, cepat dilatih, dan sering digunakan sebagai pembanding awal dalam tugas klasifikasi.
 
 #### **Model 2 – Advanced / ML Model**
 Model machine learning yang lebih kompleks.
-**Pilihan model:**
-- Random Forest
-- Gradient Boosting (XGBoost, LightGBM, CatBoost)
-- Support Vector Machine (SVM)
-- Ensemble methods
-- Clustering (K-Means, DBSCAN) - untuk unsupervised
-- PCA / dimensionality reduction (untuk preprocessing)
-
-**[Jelaskan model advanced yang Anda pilih dan alasannya]**
+Random Forest Classifier (Advanced ML)   Model ini mampu menangkap hubungan non-linear antar fitur dan menyediakan informasi feature importance.
 
 #### **Model 3 – Deep Learning Model (WAJIB)**
 Model deep learning yang sesuai dengan jenis data.
-**Pilihan Implementasi (pilih salah satu sesuai dataset):**
-**A. Tabular Data:**
-- Multilayer Perceptron (MLP) / Neural Network
-- Minimum: 2 hidden layers
-- Contoh: prediksi harga, klasifikasi binary/multiclass
-
-**B. Image Data:**
-- CNN sederhana (minimum 2 convolutional layers) **ATAU**
-- Transfer Learning (ResNet, VGG, MobileNet, EfficientNet) - **recommended**
-- Contoh: klasifikasi gambar, object detection
-
-**C. Text Data:**
-- LSTM/GRU (minimum 1 layer) **ATAU**
-- Embedding + Dense layers **ATAU**
-- Pre-trained model (BERT, DistilBERT, Word2Vec)
-- Contoh: sentiment analysis, text classification
-
-**D. Time Series:**
-- LSTM/GRU untuk sequential prediction
-- Contoh: forecasting, anomaly detection
-
-**E. Recommender Systems:**
-- Neural Collaborative Filtering (NCF)
-- Autoencoder-based Collaborative Filtering
-- Deep Matrix Factorization
-
-**Minimum Requirements untuk Deep Learning:**
-- ✅ Model harus training minimal 10 epochs
-- ✅ Harus ada plot loss dan accuracy/metric per epoch
-- ✅ Harus ada hasil prediksi pada test set
-- ✅ Training time dicatat (untuk dokumentasi)
-
-**Tidak Diperbolehkan:**
-- ❌ Copy-paste kode tanpa pemahaman
-- ❌ Model tidak di-train (hanya define arsitektur)
-- ❌ Tidak ada evaluasi pada test set
-
-**[Jelaskan model deep learning yang Anda pilih dan alasannya]**
+Multilayer Perceptron / MLP (Deep Learning)   Model ini sesuai untuk data tabular dan mampu mempelajari representasi fitur yang lebih kompleks dibandingkan model klasik.
 
 ---
 
 ## 4. DATA UNDERSTANDING
 ### 4.1 Informasi Dataset
 **Sumber Dataset:**  
-[Sebutkan sumber: Kaggle, UCI ML Repository, atau sumber lain dengan URL]
+[https://archive.ics.uci.edu/dataset/397/las+vegas+strip]
 
 **Deskripsi Dataset:**
-- Jumlah baris (rows): [angka]
-- Jumlah kolom (columns/features): [angka]
-- Tipe data: [Tabular / Image / Text / Time Series / Audio / Video]
-- Ukuran dataset: [MB/GB]
-- Format file: [CSV / JSON / Images / TXT / etc.]
+Deskripsi Dataset:
+- Jumlah baris (rows): 505
+- Jumlah kolom (columns/features): 20 fitur
+- Tipe data: Tabular
+- Ukuran dataset: 60 KB
+- Format file: CSV
 
 ### 4.2 Deskripsi Fitur
 Jelaskan setiap fitur/kolom yang ada dalam dataset.
 **Contoh tabel:**
-| Nama Fitur | Tipe Data | Deskripsi | Contoh Nilai |
-|------------|-----------|-----------|--------------|
-| id | Integer | ID unik data | 1, 2, 3 |
-| age | Integer | Usia (tahun) | 25, 30, 45 |
-| income | Float | Pendapatan (juta) | 5.5, 10.2 |
-| category | Categorical | Kategori produk | A, B, C |
-| text | String | Teks ulasan | "Produk bagus..." |
-| image | Image | Citra 224x224 RGB | Array 224x224x3 |
-| label | Categorical | Label target | 0, 1 atau "positif", "negatif" |
-
-**[Buat tabel deskripsi fitur Anda di sini]**
+| Nama Fitur | Tipe Data | Deskripsi |
+|------------|-----------|-----------|
+| User country | String | Negara asal pengguna yang memberikan ulasan |
+| Nr. reviews | Integer | Jumlah total ulasan yang pernah ditulis oleh pengguna |
+| Nr. hotel reviews | Integer | Jumlah ulasan yang dimiliki hotel |
+| Helpful votes | Integer | Jumlah suara "helpful" yang diterima pengguna |
+| Score | Integer | Rating hotel yang diberikan pengguna (1–5) |
+| Period of stay | String | Periode menginap pengguna |
+| Traveler type | String | Jenis perjalanan pengguna |
+| Pool | String | Ketersediaan kolam renang |
+| Gym | String | Ketersediaan fasilitas gym |
+| Tennis court | String | Ketersediaan lapangan tenis |
+| Spa | String | Ketersediaan fasilitas spa |
+| Casino | String | Ketersediaan fasilitas kasino |
+| Free internet | String | Ketersediaan akses internet gratis |
+| Hotel name | String | Nama hotel yang diulas |
+| Hotel stars | Integer | Jumlah bintang hotel |
+| Nr. rooms | Integer | Jumlah total kamar hotel |
+| User continent | String | Benua asal pengguna |
+| Member years | Integer | Lama pengguna menjadi anggota TripAdvisor (tahun) |
+| Review month | String | Bulan penulisan ulasan |
+| Review weekday | String | Hari dalam minggu penulisan ulasan |
 
 ### 4.3 Kondisi Data
+•	Missing Values: Tidak ditemukan
 
-Jelaskan kondisi dan permasalahan data:
+•	Duplicate Data: Tidak ditemukan
 
-- **Missing Values:** [Ada/Tidak, berapa persen?]
-- **Duplicate Data:** [Ada/Tidak, berapa banyak?]
-- **Outliers:** [Ada/Tidak, pada fitur apa?]
-- **Imbalanced Data:** [Ada/Tidak, rasio kelas?]
-- **Noise:** [Jelaskan jika ada]
-- **Data Quality Issues:** [Jelaskan jika ada masalah lain]
+•	Outliers: Ada pada fitur jumlah ulasan dan helpful votes
+
+•	Imbalanced Data: Distribusi kelas relatif seimbang
+
+•	Noise: Ada variasi alami pada rating pengguna
+
+•	Data Quality Issues: Tidak ada masalah signifikan
 
 ### 4.4 Exploratory Data Analysis (EDA) - (**OPSIONAL**)
-
-**Requirement:** Minimal 3 visualisasi yang bermakna dan insight-nya.
-**Contoh jenis visualisasi yang dapat digunakan:**
-- Histogram (distribusi data)
-- Boxplot (deteksi outliers)
-- Heatmap korelasi (hubungan antar fitur)
-- Bar plot (distribusi kategori)
-- Scatter plot (hubungan 2 variabel)
-- Wordcloud (untuk text data)
-- Sample images (untuk image data)
-- Time series plot (untuk temporal data)
-- Confusion matrix heatmap
-- Class distribution plot
-
 
 #### Visualisasi 1: [Judul Visualisasi]
 [Insert gambar/plot]
@@ -218,98 +157,19 @@ Jelaskan kondisi dan permasalahan data:
 
 Bagian ini menjelaskan **semua** proses transformasi dan preprocessing data yang dilakukan.
 ### 5.1 Data Cleaning
-**Aktivitas:**
-- Handling missing values
-- Removing duplicates
-- Handling outliers
-- Data type conversion
-**Contoh:**
-```
-Missing Values:
-- Fitur 'age' memiliki 50 missing values (5% dari data)
-- Strategi: Imputasi dengan median karena distribusi skewed
-- Alasan: Median lebih robust terhadap outliers dibanding mean
-```
-
-**[Jelaskan langkah-langkah data cleaning yang Anda lakukan]**
-
-
-
+Aktivitas: Tidak ditemukan missing values dan data duplikat. Outliers ditangani secara implisit oleh model (Random Forest) dan melalui standardisasi fitur untuk model lain.
 ### 5.2 Feature Engineering
-**Aktivitas:**
-- Creating new features
-- Feature extraction
-- Feature selection
-- Dimensionality reduction
-
-**[Jelaskan feature engineering yang Anda lakukan]**
-
+Aktivitas: Tidak dilakukan pembuatan fitur baru. Hanya fitur numerik yang digunakan untuk menjaga konsistensi input model.
 ### 5.3 Data Transformation
-
-**Untuk Data Tabular:**
-- Encoding (Label Encoding, One-Hot Encoding, Ordinal Encoding)
-- Scaling (Standardization, Normalization, MinMaxScaler)
-
-**Untuk Data Text:**
-- Tokenization
-- Lowercasing
-- Removing punctuation/stopwords
-- Stemming/Lemmatization
-- Padding sequences
-- Word embedding (Word2Vec, GloVe, fastText)
-
-**Untuk Data Image:**
-- Resizing
-- Normalization (pixel values 0-1 atau -1 to 1)
-- Data augmentation (rotation, flip, zoom, brightness, etc.)
-- Color space conversion
-
-**Untuk Time Series:**
-- Creating time windows
-- Lag features
-- Rolling statistics
-- Differencing
-
-**[Jelaskan transformasi yang Anda lakukan]**
-
+•	Scaling: StandardScaler digunakan untuk Logistic Regression dan MLP.
+<img width="808" height="245" alt="image" src="https://github.com/user-attachments/assets/5923cfcb-ced7-4a36-9aae-46b85d7bda25" />
+•	Encoding: Tidak diperlukan karena target berupa numerik ordinal.
 ### 5.4 Data Splitting
-
-**Strategi pembagian data:**
-```
-- Training set: [X]% ([jumlah] samples)
-- Validation set: [X]% ([jumlah] samples) - jika ada
-- Test set: [X]% ([jumlah] samples)
-```
-**Contoh:**
-```
-Menggunakan stratified split untuk mempertahankan distribusi kelas:
-- Training: 80% (8000 samples)
-- Test: 20% (2000 samples)
-- Random state: 42 untuk reproducibility
-```
-
-**[Jelaskan strategi splitting Anda dan alasannya]**
-
-
-
-### 5.5 Data Balancing (jika diperlukan)
-**Teknik yang digunakan:**
-- SMOTE (Synthetic Minority Over-sampling Technique)
-- Random Undersampling
-- Class weights
-- Ensemble sampling
-
-**[Jelaskan jika Anda melakukan data balancing]**
-
-### 5.6 Ringkasan Data Preparation
-
-**Per langkah, jelaskan:**
-1. **Apa** yang dilakukan
-**[Jelaskan ]**
-2. **Mengapa** penting
-**[Jelaskan Mengapa ?]**
-3. **Bagaimana** implementasinya
-**[Jelaskan Bagaimana]**
+Strategi pembagian data:
+Dataset Awal : ± 155 sampel
+Dataset dibagi menjadi 2 bagian:
+Dataset dibagi menjadi dua subset utama menggunakan teknik stratified train–test split untuk menjaga proporsi kelas target (Score) tetap konsisten pada setiap subset. Sebanyak 80% data digunakan sebagai training set, sedangkan 20% sisanya digunakan sebagai test set untuk evaluasi akhir model.
+Pada tahap pelatihan model deep learning, sebagian data training kembali dibagi secara internal dengan validation split sebesar 20% untuk keperluan pemantauan performa dan pencegahan overfitting selama proses training. Pembagian data menggunakan random state sebesar 42 agar hasil eksperimen dapat direproduksi.
 
 ---
 
@@ -317,85 +177,58 @@ Menggunakan stratified split untuk mempertahankan distribusi kelas:
 ### 6.1 Model 1 — Baseline Model
 #### 6.1.1 Deskripsi Model
 
-**Nama Model:** [Nama model, misal: Logistic Regression]
+**Nama Model:** Logistic Regression
 **Teori Singkat:**  
-[Jelaskan secara singkat bagaimana model ini bekerja]
+Logistic Regression merupakan algoritma klasifikasi yang memodelkan hubungan antara fitur input dan probabilitas kelas target menggunakan fungsi logistik (sigmoid). Model ini bekerja dengan mengestimasi parameter yang memaksimalkan kemungkinan prediksi kelas yang benar berdasarkan kombinasi linier dari fitur input.
 **Alasan Pemilihan:**  
-[Mengapa memilih model ini sebagai baseline?]
+Logistic Regression dipilih sebagai model baseline karena kesederhanaannya, efisiensi komputasi yang tinggi, serta kemampuannya memberikan performa awal yang dapat dijadikan pembanding terhadap model yang lebih kompleks. Selain itu, model ini cocok untuk data tabular numerik dan mudah diinterpretasikan.
 
 #### 6.1.2 Hyperparameter
 **Parameter yang digunakan:**
-```
-[Tuliskan parameter penting, contoh:]
-- C (regularization): 1.0
-- solver: 'lbfgs'
-- max_iter: 100
-```
-
-#### 6.1.3 Implementasi (Ringkas)
-```python
-# Contoh kode (opsional, bisa dipindah ke GitHub)
-from sklearn.linear_model import LogisticRegression
-
-model_baseline = LogisticRegression(C=1.0, max_iter=100)
-model_baseline.fit(X_train, y_train)
-y_pred_baseline = model_baseline.predict(X_test)
+Parameter yang digunakan pada model Logistic Regression adalah sebagai berikut:
+•	solver: 'lbfgs'
+•	max_iter: 1000
+•	regularization: default (L2)
+Pengaturan jumlah iterasi yang lebih besar digunakan untuk memastikan proses optimisasi konvergen dengan baik.
 ```
 
-#### 6.1.4 Hasil Awal
+#### 6.1.3 Hasil Awal
 
-**[Tuliskan hasil evaluasi awal, akan dijelaskan detail di Section 7]**
+Logistic Regression sebagai model baseline memperoleh nilai akurasi sebesar 46%. Hasil ini menunjukkan bahwa model baseline mampu memberikan performa prediksi yang cukup stabil pada dataset Las Vegas Strip, meskipun menggunakan pendekatan yang relatif sederhana. Nilai akurasi ini digunakan sebagai acuan awal (baseline) untuk membandingkan performa model machine learning lanjutan dan model deep learning pada tahap berikutnya. 
 
 ---
 
 ### 6.2 Model 2 — ML / Advanced Model
 #### 6.2.1 Deskripsi Model
 
-**Nama Model:** [Nama model, misal: Random Forest / XGBoost]
+**Nama Model:** Random Forest
 **Teori Singkat:**  
-[Jelaskan bagaimana algoritma ini bekerja]
+Random Forest merupakan metode ensemble learning yang membangun banyak pohon keputusan (decision tree) secara independen dan menggabungkan hasil prediksinya melalui mekanisme majority voting. Setiap pohon dilatih menggunakan subset data dan fitur yang dipilih secara acak, sehingga mampu mengurangi risiko overfitting dan meningkatkan kemampuan generalisasi model.
 
 **Alasan Pemilihan:**  
-[Mengapa memilih model ini?]
+Random Forest dipilih sebagai model pembanding tingkat menengah karena kemampuannya dalam menangkap hubungan nonlinier antar fitur, ketahanannya terhadap noise, serta performanya yang umumnya lebih baik dibandingkan model baseline. Model ini juga tidak memerlukan asumsi distribusi data tertentu.
 
 **Keunggulan:**
-- [Sebutkan keunggulan]
+Model Random Forest memiliki kemampuan yang baik dalam menangkap hubungan non-linear antar fitur karena menggunakan pendekatan ensemble dari banyak decision tree. Model ini relatif robust terhadap noise dan outlier, serta tidak memerlukan proses feature scaling. Selain itu, Random Forest menyediakan informasi feature importance yang berguna untuk memahami kontribusi setiap fitur terhadap prediksi, sehingga meningkatkan interpretabilitas model pada data tabular.
 
 **Kelemahan:**
-- [Sebutkan kelemahan]
+Meskipun lebih kompleks, Random Forest pada dataset Las Vegas Strip tidak menunjukkan peningkatan performa yang signifikan dibandingkan model baseline. Model ini juga membutuhkan waktu training yang lebih lama dan sumber daya komputasi yang lebih besar. Selain itu, dengan jumlah data dan fitur yang terbatas, Random Forest berpotensi mengalami overfitting, sehingga kompleksitas tambahan tidak selalu sebanding dengan peningkatan akurasi yang diperoleh.
 
 #### 6.2.2 Hyperparameter
 
 **Parameter yang digunakan:**
 ```
-[Tuliskan parameter penting, contoh:]
-- n_estimators: 100
-- max_depth: 10
-- learning_rate: 0.1
-- min_samples_split: 2
+Parameter yang digunakan pada model Random Forest adalah sebagai berikut:
+•	n_estimators: 200
+•	max_depth: None
+•	random_state: 42
+•	class_weight: None
+Penggunaan jumlah pohon yang relatif besar bertujuan untuk meningkatkan stabilitas prediksi, sedangkan random_state digunakan untuk memastikan reprodusibilitas hasil.
 ```
 
-**Hyperparameter Tuning (jika dilakukan):**
-- Metode: [Grid Search / Random Search / Bayesian Optimization]
-- Best parameters: [...]
+#### 6.2.3 Hasil Model
 
-#### 6.2.3 Implementasi (Ringkas)
-```python
-# Contoh kode
-from sklearn.ensemble import RandomForestClassifier
-
-model_advanced = RandomForestClassifier(
-    n_estimators=100,
-    max_depth=10,
-    random_state=42
-)
-model_advanced.fit(X_train, y_train)
-y_pred_advanced = model_advanced.predict(X_test)
-```
-
-#### 6.2.4 Hasil Model
-
-**[Tuliskan hasil evaluasi, akan dijelaskan detail di Section 7]**
+Berdasarkan hasil pengujian pada data test, model Random Forest memperoleh nilai akurasi sebesar 43%. Nilai ini masih berada di bawah performa model baseline yang mencapai akurasi 46%. Hasil ini menunjukkan bahwa pada dataset yang digunakan, Random Forest belum mampu meningkatkan performa prediksi secara signifikan dibandingkan model baseline.
 
 ---
 
@@ -403,10 +236,10 @@ y_pred_advanced = model_advanced.predict(X_test)
 
 #### 6.3.1 Deskripsi Model
 
-**Nama Model:** [Nama arsitektur, misal: CNN / LSTM / MLP]
+**Nama Model:** Multilayer Perceptron (MLP)
 
 ** (Centang) Jenis Deep Learning: **
-- [ ] Multilayer Perceptron (MLP) - untuk tabular
+- [✅] Multilayer Perceptron (MLP) - untuk tabular
 - [ ] Convolutional Neural Network (CNN) - untuk image
 - [ ] Recurrent Neural Network (LSTM/GRU) - untuk sequential/text
 - [ ] Transfer Learning - untuk image
@@ -415,106 +248,59 @@ y_pred_advanced = model_advanced.predict(X_test)
 - [ ] Neural Collaborative Filtering - untuk recommender
 
 **Alasan Pemilihan:**  
-[Mengapa arsitektur ini cocok untuk dataset Anda?]
-
+Multilayer Perceptron (MLP) dipilih karena dataset Las Vegas Strip merupakan data tabular numerik yang tidak memiliki struktur spasial maupun temporal. MLP mampu mempelajari hubungan non-linear antar fitur numerik secara efektif melalui beberapa hidden layer. Selain itu, MLP digunakan untuk mengevaluasi potensi peningkatan performa dibandingkan model machine learning tradisional dengan memanfaatkan kemampuan representasi kompleks dari deep learning.
 #### 6.3.2 Arsitektur Model
 
 **Deskripsi Layer:**
 
-[Jelaskan arsitektur secara detail atau buat tabel]
-
-**Contoh:**
-```
-1. Input Layer: shape (224, 224, 3)
-2. Conv2D: 32 filters, kernel (3,3), activation='relu'
-3. MaxPooling2D: pool size (2,2)
-4. Conv2D: 64 filters, kernel (3,3), activation='relu'
-5. MaxPooling2D: pool size (2,2)
-6. Flatten
-7. Dense: 128 units, activation='relu'
-8. Dropout: 0.5
-9. Dense: 10 units, activation='softmax'
-
-Total parameters: [jumlah]
-Trainable parameters: [jumlah]
+Arsitektur MLP yang digunakan terdiri dari beberapa fully connected layer dengan regularisasi dropout untuk mengurangi risiko overfitting.
+Deskripsi Layer:
+1.	Input Layer: shape (jumlah fitur numerik)
+2.	Dense Layer: 128 unit, activation = ReLU
+3.	Dropout: 0.3
+4.	Dense Layer: 64 unit, activation = ReLU
+5.	Dropout: 0.3
+6.	Output Layer: jumlah kelas rating (5 kelas), activation = Softmax
+Model ini dirancang untuk melakukan klasifikasi multikelas pada skor rating hotel dengan output berupa probabilitas untuk setiap kelas.
 ```
 
 #### 6.3.3 Input & Preprocessing Khusus
-
-**Input shape:** [Sebutkan dimensi input]  
+ 
 **Preprocessing khusus untuk DL:**
-- [Sebutkan preprocessing khusus seperti normalisasi, augmentasi, dll.]
+Input shape: Jumlah fitur numerik hasil preprocessing (X_train_scaled.shape[1])
+
+Preprocessing khusus untuk DL: 
+•	Standardisasi fitur menggunakan StandardScaler
+•	Seluruh fitur numerik dinormalisasi agar memiliki mean 0 dan standar deviasi 1
+•	Target label disesuaikan menjadi 0-indexed (rating 1–5 diubah menjadi 0–4) untuk kompatibilitas dengan fungsi loss sparse_categorical_crossentropy
+
 
 #### 6.3.4 Hyperparameter
 
 **Training Configuration:**
 ```
-- Optimizer: Adam / SGD / RMSprop
-- Learning rate: [nilai]
-- Loss function: [categorical_crossentropy / mse / binary_crossentropy / etc.]
-- Metrics: [accuracy / mae / etc.]
-- Batch size: [nilai]
-- Epochs: [nilai]
-- Validation split: [nilai] atau menggunakan validation set terpisah
-- Callbacks: [EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, etc.]
+Training Configuration:
+•	Optimizer: Adam
+•	Learning rate: Default (Adam)
+•	Loss function: sparse_categorical_crossentropy
+•	Metrics: accuracy
+•	Batch size: 32
+•	Epochs: 30
+•	Validation split: 0.2
+•	Callbacks: Tidak digunakan
 ```
 
-#### 6.3.5 Implementasi (Ringkas)
-
-**Framework:** TensorFlow/Keras / PyTorch
-```python
-# Contoh kode TensorFlow/Keras
-import tensorflow as tf
-from tensorflow import keras
-
-model_dl = keras.Sequential([
-    keras.layers.Dense(128, activation='relu', input_shape=(input_dim,)),
-    keras.layers.Dropout(0.3),
-    keras.layers.Dense(64, activation='relu'),
-    keras.layers.Dropout(0.3),
-    keras.layers.Dense(num_classes, activation='softmax')
-])
-
-model_dl.compile(
-    optimizer='adam',
-    loss='categorical_crossentropy',
-    metrics=['accuracy']
-)
-
-history = model_dl.fit(
-    X_train, y_train,
-    validation_split=0.2,
-    epochs=50,
-    batch_size=32,
-    callbacks=[early_stopping]
-)
-```
-
-#### 6.3.6 Training Process
+#### 6.3.5 Training Process
 
 **Training Time:**  
-[Sebutkan waktu training total, misal: 15 menit]
+Relatif singkat (8 Detik) karena ukuran dataset dan arsitektur model yang sederhana.
 
 **Computational Resource:**  
-[CPU / GPU, platform: Local / Google Colab / Kaggle]
+CPU – dijalankan pada lingkungan lokal / Google Colab.
 
 **Training History Visualization:**
 
-[Insert plot loss dan accuracy/metric per epoch]
-
-**Contoh visualisasi yang WAJIB:**
-1. **Training & Validation Loss** per epoch
-2. **Training & Validation Accuracy/Metric** per epoch
-
-**Analisis Training:**
-- Apakah model mengalami overfitting? [Ya/Tidak, jelaskan]
-- Apakah model sudah converge? [Ya/Tidak, jelaskan]
-- Apakah perlu lebih banyak epoch? [Ya/Tidak, jelaskan]
-
-#### 6.3.7 Model Summary
-```
-[Paste model.summary() output atau rangkuman arsitektur]
-```
+<img width="480" height="740" alt="image" src="https://github.com/user-attachments/assets/08a84637-a1a1-4ab0-a004-45f9c2058118" />
 
 ---
 
@@ -522,47 +308,38 @@ history = model_dl.fit(
 
 ### 7.1 Metrik Evaluasi
 
-**Pilih metrik yang sesuai dengan jenis tugas:**
-
-#### **Untuk Klasifikasi:**
-- **Accuracy**: Proporsi prediksi yang benar
-- **Precision**: TP / (TP + FP)
-- **Recall**: TP / (TP + FN)
-- **F1-Score**: Harmonic mean dari precision dan recall
-- **ROC-AUC**: Area under ROC curve
-- **Confusion Matrix**: Visualisasi prediksi
-
-#### **Untuk Regresi:**
-- **MSE (Mean Squared Error)**: Rata-rata kuadrat error
-- **RMSE (Root Mean Squared Error)**: Akar dari MSE
-- **MAE (Mean Absolute Error)**: Rata-rata absolute error
-- **R² Score**: Koefisien determinasi
-- **MAPE (Mean Absolute Percentage Error)**: Error dalam persentase
-
-#### **Untuk NLP (Text Classification):**
-- **Accuracy**
-- **F1-Score** (terutama untuk imbalanced data)
-- **Precision & Recall**
-- **Perplexity** (untuk language models)
-
-#### **Untuk Computer Vision:**
-- **Accuracy**
-- **IoU (Intersection over Union)** - untuk object detection/segmentation
-- **Dice Coefficient** - untuk segmentation
-- **mAP (mean Average Precision)** - untuk object detection
-
-#### **Untuk Clustering:**
-- **Silhouette Score**
-- **Davies-Bouldin Index**
-- **Calinski-Harabasz Index**
-
-#### **Untuk Recommender System:**
-- **RMSE**
-- **Precision@K**
-- **Recall@K**
-- **NDCG (Normalized Discounted Cumulative Gain)**
-
-**[Pilih dan jelaskan metrik yang Anda gunakan]**
+Untuk Klasifikasi:
+Accuracy: Proporsi prediksi yang benar
+Precision: TP / (TP + FP)
+Recall: TP / (TP + FN)
+F1-Score: Harmonic mean dari precision dan recall
+ROC-AUC: Area under ROC curve
+Confusion Matrix: Visualisasi prediksi
+Untuk Regresi:
+MSE (Mean Squared Error): Rata-rata kuadrat error
+RMSE (Root Mean Squared Error): Akar dari MSE
+MAE (Mean Absolute Error): Rata-rata absolute error
+R² Score: Koefisien determinasi
+MAPE (Mean Absolute Percentage Error): Error dalam persentase
+Untuk NLP (Text Classification):
+Accuracy
+F1-Score (terutama untuk imbalanced data)
+Precision & Recall
+Perplexity (untuk language models)
+Untuk Computer Vision:
+Accuracy
+IoU (Intersection over Union) - untuk object detection/segmentation
+Dice Coefficient - untuk segmentation
+mAP (mean Average Precision) - untuk object detection
+Untuk Clustering:
+Silhouette Score
+Davies-Bouldin Index
+Calinski-Harabasz Index
+Untuk Recommender System:
+RMSE
+Precision@K
+Recall@K
+NDCG (Normalized Discounted Cumulative Gain)
 
 ### 7.2 Hasil Evaluasi Model
 
@@ -570,44 +347,55 @@ history = model_dl.fit(
 
 **Metrik:**
 ```
-[Tuliskan hasil metrik, contoh:]
-- Accuracy: 0.75
-- Precision: 0.73
-- Recall: 0.76
-- F1-Score: 0.74
+Metrik:
+•	Accuracy: 0.465
+
+•	Precision (weighted avg): 0.37
+
+•	Recall (weighted avg): 0.47
+
+•	F1-Score (weighted avg): 0.33
+
 ```
 
-**Confusion Matrix / Visualization:**  
-[Insert gambar jika ada]
+<img width="383" height="347" alt="image" src="https://github.com/user-attachments/assets/701b59e2-dc64-4e83-bfaa-857aed294ac1" />
+
 
 #### 7.2.2 Model 2 (Advanced/ML)
 
 **Metrik:**
 ```
-- Accuracy: 0.85
-- Precision: 0.84
-- Recall: 0.86
-- F1-Score: 0.85
+Metrik:
+•	Accuracy: 0.436
+
+•	Precision (weighted avg): 0.46
+
+•	Recall (weighted avg): 0.44
+
+•	F1-Score (weighted avg): 0.37
+
 ```
 
 **Confusion Matrix / Visualization:**  
-[Insert gambar jika ada]
-
-**Feature Importance (jika applicable):**  
-[Insert plot feature importance untuk tree-based models]
+<img width="385" height="345" alt="image" src="https://github.com/user-attachments/assets/b9635dfc-7046-4d81-ae5c-afcff5e5ed81" />
 
 #### 7.2.3 Model 3 (Deep Learning)
 
 **Metrik:**
 ```
-- Accuracy: 0.89
-- Precision: 0.88
-- Recall: 0.90
-- F1-Score: 0.89
+Metrik:
+•	Accuracy: 0.436
+
+•	Precision (weighted avg): 0.32
+
+•	Recall (weighted avg): 0.44
+
+•	F1-Score (weighted avg): 0.35
+
 ```
 
 **Confusion Matrix / Visualization:**  
-[Insert gambar jika ada]
+<img width="380" height="345" alt="image" src="https://github.com/user-attachments/assets/85c81749-7a01-44c9-a1e4-14fc0e834b2c" />
 
 **Training History:**  
 [Sudah diinsert di Section 6.3.6]
@@ -619,33 +407,32 @@ history = model_dl.fit(
 
 **Tabel Perbandingan:**
 
-| Model | Accuracy | Precision | Recall | F1-Score | Training Time | Inference Time |
-|-------|----------|-----------|--------|----------|---------------|----------------|
-| Baseline (Model 1) | 0.75 | 0.73 | 0.76 | 0.74 | 2s | 0.01s |
-| Advanced (Model 2) | 0.85 | 0.84 | 0.86 | 0.85 | 30s | 0.05s |
-| Deep Learning (Model 3) | 0.89 | 0.88 | 0.90 | 0.89 | 15min | 0.1s |
+| Model | Accuracy | Precision | Recall | Recall |
+|-------|----------|-----------|--------|--------|
+| Baseline (Model 1) | 0.465 | 0.37 | 0.47 | 0.33 |
+| Advanced (Model 2) | 0.436 | 0.46 | 0.44 | 0.37 |
+| Deep Learning (Model 3) | 0.436 | 0.32 | 0.44 | 0.35 |
 
 **Visualisasi Perbandingan:**  
-[Insert bar chart atau plot perbandingan metrik]
+<img width="561" height="384" alt="image" src="https://github.com/user-attachments/assets/f4147d64-1274-4d13-a343-5263d978a81b" />
 
 ### 7.4 Analisis Hasil
 
 **Interpretasi:**
+Model Terbaik:
+Berdasarkan hasil evaluasi pada data uji, Logistic Regression dapat dianggap sebagai model dengan performa terbaik secara keseluruhan karena menghasilkan nilai accuracy tertinggi (0.465) dibandingkan Random Forest dan Deep Learning. Meskipun model ini sederhana, Logistic Regression mampu memberikan prediksi yang relatif stabil pada kelas mayoritas, sehingga lebih efektif pada kondisi distribusi data yang tidak merata.
 
-1. **Model Terbaik:**  
-   [Sebutkan model mana yang terbaik dan mengapa]
+Perbandingan dengan Baseline:
+Dibandingkan dengan baseline Logistic Regression, Random Forest dan Deep Learning tidak menunjukkan peningkatan performa accuracy yang signifikan. Random Forest memang memberikan peningkatan pada precision dan F1-score, namun diikuti dengan penurunan accuracy. Sementara itu, model Deep Learning menghasilkan performa yang sebanding dengan Random Forest, tetapi tidak mampu melampaui baseline. Hal ini menunjukkan bahwa penggunaan model yang lebih kompleks tidak selalu menjamin peningkatan kinerja pada dataset ini.
 
-2. **Perbandingan dengan Baseline:**  
-   [Jelaskan peningkatan performa dari baseline ke model lainnya]
+Trade-off:
+Terdapat trade-off yang jelas antara kompleksitas model dan performa. Logistic Regression memiliki kompleksitas rendah, waktu training yang cepat, serta interpretabilitas yang tinggi. Random Forest dan Deep Learning membutuhkan sumber daya komputasi yang lebih besar dan waktu training lebih lama, namun tidak memberikan peningkatan performa yang sepadan. Dengan demikian, dari perspektif efisiensi dan kemudahan interpretasi, model baseline lebih menguntungkan.
 
-3. **Trade-off:**  
-   [Jelaskan trade-off antara performa vs kompleksitas vs waktu training]
+Error Analysis:
+Kesalahan prediksi paling banyak terjadi pada kelas rating rendah (1–3), yang memiliki jumlah sampel sangat sedikit. Ketiga model cenderung salah mengklasifikasikan kelas-kelas tersebut sebagai rating yang lebih tinggi, terutama rating 4 dan 5. Hal ini menunjukkan bahwa model mengalami kesulitan dalam membedakan kelas minoritas akibat keterbatasan data dan dominasi kelas mayoritas.
 
-4. **Error Analysis:**  
-   [Jelaskan jenis kesalahan yang sering terjadi, kasus yang sulit diprediksi]
-
-5. **Overfitting/Underfitting:**  
-   [Analisis apakah model mengalami overfitting atau underfitting]
+Overfitting/Underfitting:
+Tidak ditemukan indikasi overfitting yang signifikan, khususnya pada model Deep Learning, karena nilai training dan validation loss relatif stabil. Namun, performa yang rendah pada seluruh model mengindikasikan adanya underfitting, di mana model belum mampu menangkap pola yang cukup kompleks untuk memprediksi seluruh kelas rating dengan baik, terutama pada kelas minoritas.
 
 ---
 
@@ -654,32 +441,32 @@ history = model_dl.fit(
 ### 8.1 Kesimpulan Utama
 
 **Model Terbaik:**  
-[Sebutkan model terbaik berdasarkan evaluasi]
+Berdasarkan hasil evaluasi pada data uji, Logistic Regression ditetapkan sebagai model terbaik dalam penelitian ini.
 
 **Alasan:**  
-[Jelaskan mengapa model tersebut lebih unggul]
+Logistic Regression menghasilkan nilai accuracy tertinggi (≈46,5%) dibandingkan Random Forest dan Deep Learning. Selain itu, model ini menunjukkan stabilitas hasil yang lebih konsisten, waktu training yang cepat, serta kompleksitas yang rendah, sehingga lebih sesuai dengan karakteristik dataset yang memiliki distribusi kelas tidak seimbang dan jumlah fitur terbatas.
 
 **Pencapaian Goals:**  
-[Apakah goals di Section 3.2 tercapai? Jelaskan]
+Tujuan penelitian pada Section 3.2, yaitu membangun dan membandingkan model Machine Learning dan Deep Learning untuk memprediksi rating hotel di Las Vegas Strip, telah tercapai. Penelitian ini berhasil mengevaluasi performa tiga pendekatan berbeda serta menganalisis kelebihan dan keterbatasan masing-masing model.
 
 ### 8.2 Key Insights
 
 **Insight dari Data:**
-- [Insight 1]
-- [Insight 2]
-- [Insight 3]
+- [Insight 1 Dataset memiliki ketidakseimbangan kelas, dengan dominasi rating tinggi (4 dan 5) dibandingkan rating rendah.]
+- [Insight 2 Fitur numerik seperti jumlah ulasan dan helpful votes memiliki kontribusi yang lebih dominan dibandingkan fitur lainnya.]
+- [Insight 3 Keterbatasan jumlah data pada rating rendah menyulitkan model dalam melakukan prediksi yang akurat untuk kelas minoritas.]
 
 **Insight dari Modeling:**
-- [Insight 1]
-- [Insight 2]
+- [Insight 1 Model yang lebih kompleks seperti Random Forest dan Deep Learning tidak selalu menghasilkan performa yang lebih baik pada dataset tabular berukuran kecil hingga menengah.]
+- [Insight 2 Model sederhana seperti Logistic Regression dapat memberikan hasil yang kompetitif ketika data tidak terlalu kompleks dan fitur sudah representatif.]
 
 ### 8.3 Kontribusi Proyek
 
 **Manfaat praktis:**  
-[Jelaskan bagaimana proyek ini dapat digunakan di dunia nyata]
+Hasil penelitian ini dapat dimanfaatkan sebagai sistem pendukung keputusan bagi pengelola hotel atau platform ulasan untuk memahami faktor-faktor yang memengaruhi rating hotel serta sebagai dasar awal dalam pengembangan sistem prediksi kepuasan pelanggan.
 
 **Pembelajaran yang didapat:**  
-[Jelaskan apa yang Anda pelajari dari proyek ini]
+Proyek ini memberikan pemahaman mengenai pentingnya eksplorasi data, pemilihan model yang sesuai dengan karakteristik dataset, serta evaluasi performa secara komprehensif. Selain itu, penelitian ini menegaskan bahwa kompleksitas model harus disesuaikan dengan kualitas dan distribusi data agar menghasilkan prediksi yang optimal.
 
 ---
 
@@ -689,18 +476,18 @@ Saran pengembangan untuk proyek selanjutnya:
 ** Centang Sesuai dengan saran anda **
 
 **Data:**
-- [ ] Mengumpulkan lebih banyak data
-- [ ] Menambah variasi data
-- [ ] Feature engineering lebih lanjut
+- [✅] Mengumpulkan lebih banyak data
+- [✅] Menambah variasi data
+- [✅] Feature engineering lebih lanjut
 
 **Model:**
-- [ ] Mencoba arsitektur DL yang lebih kompleks
+- [✅] Mencoba arsitektur DL yang lebih kompleks
 - [ ] Hyperparameter tuning lebih ekstensif
-- [ ] Ensemble methods (combining models)
+- [✅] Ensemble methods (combining models)
 - [ ] Transfer learning dengan model yang lebih besar
 
 **Deployment:**
-- [ ] Membuat API (Flask/FastAPI)
+- [✅] Membuat API (Flask/FastAPI)
 - [ ] Membuat web application (Streamlit/Gradio)
 - [ ] Containerization dengan Docker
 - [ ] Deploy ke cloud (Heroku, GCP, AWS)
@@ -732,6 +519,8 @@ Saran pengembangan untuk proyek selanjutnya:
 
 **Main Libraries & Versions:**
 ```
+Main Libraries & Versions:
+
 numpy==1.24.3
 pandas==2.0.3
 scikit-learn==1.3.0
@@ -748,5 +537,4 @@ lightgbm==4.0.0
 opencv-python==4.8.0  # untuk computer vision
 nltk==3.8.1           # untuk NLP
 transformers==4.30.0  # untuk BERT, dll
-
 ```
