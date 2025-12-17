@@ -1,0 +1,98 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ===============================
+# Virtual Environment
+# ===============================
+venv/
+env/
+ENV/
+.venv/
+
+# ===============================
+# Jupyter Notebook
+# ===============================
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ===============================
+# Dataset & Data Artifacts
+# ===============================
+data/
+datasets/
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# (Kecuali ingin menyertakan contoh kecil dataset)
+!sample_*.csv
+
+# ===============================
+# Model Artifacts
+# ===============================
+models/
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# ===============================
+# Logs & Outputs
+# ===============================
+logs/
+*.log
+outputs/
+results/
+figures/
+plots/
+
+# ===============================
+# IDE / Editor
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# OS Files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# TensorFlow / Keras
+# ===============================
+checkpoint
+checkpoint.*
+events.out.tfevents.*
+
+# ===============================
+# Temporary & Cache
+# ===============================
+tmp/
+.cache/
+
+# ===============================
+# Environment Variables
+# ===============================
+.env
+.env.*
+
+# ===============================
+# System Specific
+# ===============================
+*.tmp
+*.bak
+*.old
